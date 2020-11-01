@@ -4,39 +4,29 @@
         <meta charset="utf-8">
         <link rel="icon" type="image/vnd.microsoft.icon" href="text/images/favicon.ico">
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="styles/css_styles.css">
-        <script src="scripts/funcs.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/css_styles.css">
+		<script src="scripts/funcs.js"></script>
         <title>Опрос</title>
     </head>
 <body>
-    <div class="cont_all">
-        <div class="cont_bot">
-                <div class = "qbox" id = "q_1">
-                    <div class= "question text">Вопрос 1</div>
-                    <div class = "ansbox">
-                        <div class= "qans text" id = "1_a">a</div>
-                        <div class= "qans text" id = "1_b">b</div>
-                        <div class= "qans text" id = "1_c">c</div>
-                        <div class= "qans text" id = "1_d">d</div>
-                    </div>
-                </div>
-                
-                <div class = "qbox" id = "q_2" style = "display: none;">
-                    <div class= "question text">Вопрос 2</div>
-                        <div class = "ansbox">
-                            <div class= "qans text" id = "2_a">a</div>
-                            <div class= "qans text" id = "2_b">b</div>
-                            <div class= "qans text" id = "2_c">c</div>
-                            <div class= "qans text" id = "2_d">d</div>
-                        </div>
-                </div>
-
-                <div class = "rbox text" id = "result" style = "display: none;">
-                </div>
-    
-                <div class = "qbtn" id = "btn">Button</div>
-        </div>
-    </div>
+    <div class="land_cont_all" id = "all">
+    	<div id = "start_page" class = "qbox">
+    		<h2 class = "question text">Готовность к риску<br>Шуберт(PSK)</h2>
+			<p class = "land_text">
+				&nbsp;&nbsp;Тест позволяет оценить степень готовности к риску. Риск понимается как действие наудачу в надежде
+    		 на счастливый исход или как возможная опасность, как действие, совершаемое в условиях неопределённости</p>
+    		<p class = "land_text">&nbsp;&nbsp;Оценивается степень вашей готовности совершать действия при ответе на каждый из 25 вопросов.
+			Балл за каждый ответ получается по следующей схеме: </p>
+			<div class = "qtable land_text">
+    		>&nbsp;&nbsp;"Да" - 2 балла<br>
+    		>&nbsp;&nbsp;"Скорее да" - 1 балл<br>
+    		>&nbsp;&nbsp;"Затрудняюсь ответить" - 0 баллов<br>
+    		>&nbsp;&nbsp;"Скорее нет" - 1 балл<br>
+			>&nbsp;&nbsp;"Нет" - 2 балла
+			</p>
+    	</div>
+		<a href="index.html"><div class = "qbtn land_text" id = "start">Начать</div></a>
+	</div>
+	<script language="JavaScript">correct_sizes()</script>
 </body>
-<script src="scripts/test.js"></script>
 </html>

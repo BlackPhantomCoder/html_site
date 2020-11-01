@@ -1,20 +1,17 @@
-
-const count = 2;
+const count = 25;
 const  pre_id = "q_"
 const max_current_selected = 1;
 
 var current = 1;
 var current_selected = 0;
 var btn = document.getElementById("btn");
-var result = document.getElementById("result");
-
 {
     btn.onclick = function(event){
         if(current_selected == max_current_selected){
             if(current == count){
                 hide(document.getElementById(pre_id + current));
+                var result = document.getElementById("result_" + get_result());
                 result.style.display = "block";
-                result.innerText += "Твои ответы: " + get_result();
                 btn.style.display = "none";
             }
             else{
@@ -47,16 +44,4 @@ var result = document.getElementById("result");
             }
         }
     }
-}
-
-function get_result(){
-    var arr = new Array();
-    var x = document.getElementsByClassName("qans");
-    for(var i = 0; i < x.length; i++){
-        var obj = x[i];
-        if(obj.classList.contains("click")){
-            arr.push(obj.id);
-        }
-    }
-    return arr;
 }
