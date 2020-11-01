@@ -21,6 +21,7 @@ var btn = document.getElementById("btn");
                 unhide(document.getElementById(pre_id + current));
             }
         }
+        btn.style.opacity = 0.5;
     }
     btn.style.opacity = 0.5;
 }

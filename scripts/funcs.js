@@ -18,7 +18,7 @@ function get_result(){
     for(var i = 0; i < x.length; i++){
         var obj = x[i];
         if(obj.classList.contains("click")){
-            switch(parse_answear(res)){
+            switch(parse_answear(obj.id)){
                 case 1:
                     res += 2;
                     break;
@@ -29,10 +29,10 @@ function get_result(){
                     res += 0;
                     break;
                 case 4:
-                    res += -1;
+                    res -= 1;
                     break;
                 case 5:
-                    res += -2;
+                    res -= 2;
                     break;
             }
         }
@@ -48,13 +48,13 @@ function get_result(){
 
 function parse_answear(ans){
     var i = 0;
-    while(i != x.length){
+    while(i != ans.length){
         if(ans[i] == "_")break;
         i++;
     }
     var str = new String();
-    for(; i < x.length; i++){
-        str += x[i];
+    for(i++; i < ans.length; i++){
+        str += ans[i];
     }
     return parseInt(str);
 }
